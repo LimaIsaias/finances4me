@@ -14,9 +14,6 @@ public class UsuarioBean {
 	private String senha;
 	private String confirmaSenha;
 
-	public String novo() {
-		return "usuario";
-	}
 
 	public String salvar() {
 		FacesContext context = FacesContext.getCurrentInstance();
@@ -24,7 +21,7 @@ public class UsuarioBean {
 			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Senha confirmada incorretamente", ""));
 			return "usuario";
 		}
-		return "sucesso";
+		return "mostraUsuario";
 	}
 
 	public String getNome() {
